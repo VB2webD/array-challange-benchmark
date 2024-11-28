@@ -1,5 +1,7 @@
 <?php
 
+ini_set('max_execution_time', 600); // Increase to 10 minutes
+
 // Matrix generation using associative array (O(1) lookup)
 function generateMatrixUsingAssocArray(int $iMax, int $yMax): void
 {
@@ -87,7 +89,7 @@ function logPerformance(float $startTime, float $endTime, int $startMemory, int 
 
 // Define matrix sizes for benchmarking
 $sizes = [
-    ['rows' => 10, 'cols' => 10],
+    ['rows' => 0, 'cols' => 10],
     ['rows' => 100, 'cols' => 100],
     ['rows' => 500, 'cols' => 500],
     ['rows' => 1000, 'cols' => 1000],
