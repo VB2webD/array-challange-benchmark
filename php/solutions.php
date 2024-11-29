@@ -51,7 +51,16 @@ function generateMatrixUsingInArray(int $iMax, int $yMax): void
         }
     }
 
-    $matrix = array_chunk($uniqueInts, $yMax);
+    for ($i=0; $i < $iMax; $i ++) {
+
+        $yArray = [];
+        for ($y=0; $y < $yMax;$y ++) {
+            $yArray[] = array_pop($uniqueInts);
+
+
+        }
+        $matrix[] = $yArray;
+    }
 
     $endTime   = microtime(true);
     $endMemory = memory_get_usage();
